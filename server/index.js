@@ -6,11 +6,18 @@ const cookieParser = require('cookie-parser');
 require('dotenv').config();
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const port = process.env.PORT || 5000;
+const corsOptions = {
+  origin: ['http://localhost:5173', 'http://localhost:5174', 'https://ecommerchweb-3c6ce.firebaseapp.com','https://ecommerchweb-3c6ce.web.app'],
+  credentials: true,
+  optionSuccessStatus: 200,
+}
+app.use(cors(corsOptions))
+
+app.use(express.json())
+app.use(cookieParser())
 
 // middleware
-app.use(cors());
-app.use(express.json());
-app.use(cookieParser()); // Adding cookie-parser
+
 
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const uri = "mongodb+srv://ecommerchWeb:oOr9gMXTqqq98ZRA@cluster0.edfearx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
