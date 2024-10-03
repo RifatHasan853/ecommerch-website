@@ -35,7 +35,7 @@ const Login = () => {
                 const user = result.user;
     
                 // Fetch the JWT token from the server or Firebase and store it in localStorage
-                axios.post('http://localhost:5000/jwt', { email: user.email }) // Use the same route as in your backend to get the token
+                axios.post('https://ecommerch-server-vintnoryc-rifat-hasans-projects.vercel.app/jwt', { email: user.email }) // Use the same route as in your backend to get the token
                     .then((res) => {
                         const token = res.data.token;
                         // Store the token securely

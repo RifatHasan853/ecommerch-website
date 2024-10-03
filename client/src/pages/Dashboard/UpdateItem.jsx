@@ -42,7 +42,7 @@ const UpdateItems = () => {
            
 
         console.log(menuItem );
-        fetch(`http://localhost:5000/products/${_id}`, {
+        fetch(`https://ecommerch-server-vintnoryc-rifat-hasans-projects.vercel.app/products/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

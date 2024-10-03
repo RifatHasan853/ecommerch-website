@@ -7,12 +7,18 @@ require('dotenv').config();
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const port = process.env.PORT || 5000;
 const corsOptions = {
-  origin: ['http://localhost:5173', 'http://localhost:5174', 'https://ecommerchweb-3c6ce.firebaseapp.com','https://ecommerchweb-3c6ce.web.app'],
+  origin: [
+    'http://localhost:5173',
+    'http://localhost:5174',
+    'https://ecommerchweb-3c6ce.web.app',
+    'https://ecommerchweb-3c6ce.firebaseapp.com',
+    
+   
+  ],
   credentials: true,
   optionSuccessStatus: 200,
 }
 app.use(cors(corsOptions))
-
 app.use(express.json())
 app.use(cookieParser())
 
@@ -34,7 +40,7 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     // Connect the client to the server (optional starting in v4.7)
-    await client.connect();
+   // await client.connect();
 
     const userCollection = client.db("ecommerchWeb").collection("users");
     const productsCollection = client.db("ecommerchWeb").collection("products");
@@ -260,7 +266,7 @@ async function run() {
           res.send(result);
         });
     
-        app.delete('/carts/:id', async (req, res) => {
+        app.delete('/carts/:id', async (req, res) => {loca
           const id = req.params.id;
           const query = { _id: new ObjectId(id) }
           const result = await cartsCollection.deleteOne(query);
@@ -468,8 +474,8 @@ app.get('/order-stats',  verifyAdmin, async(req, res) =>{
 
 
     // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
+    //await client.db("admin").command({ ping: 1 });
+   // console.log("Pinged your deployment. You successfully connected to MongoDB!");
   } finally {
     // Ensures that the client will close when you finish/error
     // await client.close();

@@ -17,7 +17,7 @@ const AdminHome = () => {
     const { data: stats = {} } = useQuery({
         queryKey: ['admin-stats'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/admin-stats');
+            const res = await fetch('https://ecommerch-server-vintnoryc-rifat-hasans-projects.vercel.app');
             const data = await res.json();
             return data;
         }
@@ -26,7 +26,7 @@ const AdminHome = () => {
     const { data: chartData = [] } = useQuery({
         queryKey: ['order-stats'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/order-stats');
+            const res = await fetch('https://ecommerch-server-vintnoryc-rifat-hasans-projects.vercel.app/order-stats');
             const data = await res.json();
             return data;
         }

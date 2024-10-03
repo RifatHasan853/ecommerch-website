@@ -49,7 +49,7 @@ const AuthProvider = ({children}) => {
           status: 'Verified',
         }
         const { data } = await axios.put(
-          `http://localhost:5000/users`,
+          `https://ecommerch-server-vintnoryc-rifat-hasans-projects.vercel.app/users`,
           currentUser
         )
         return data

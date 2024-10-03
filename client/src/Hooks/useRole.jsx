@@ -12,7 +12,7 @@ const useRole = () => {
     enabled: !loading && !!user?.email,  // Only fetch if user is authenticated and not loading
     queryFn: async () => {
       try {
-        const { data } = await axios.get(`http://localhost:5000/users/${user?.email}`);
+        const { data } = await axios.get(`https://ecommerch-server-vintnoryc-rifat-hasans-projects.vercel.app/users/${user?.email}`);
         return data.role;  // Assuming server returns { role: 'admin' } or { role: 'user' }
       } catch (error) {
         console.error('Error fetching user role:', error);

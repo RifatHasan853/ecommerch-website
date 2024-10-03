@@ -37,7 +37,7 @@ const AddItem = () => {
             }
             // 
            
-        fetch('http://localhost:5000/products', {
+        fetch('https://ecommerch-server-vintnoryc-rifat-hasans-projects.vercel.app/products', {
             
             method: 'POST',
             headers: {

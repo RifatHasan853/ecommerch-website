@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import useAuth from "./useAuth";
 
 const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5000', // Update with your backend URL
+    baseURL: 'https://ecommerch-server-vintnoryc-rifat-hasans-projects.vercel.app', // Update with your backend URL
 });
 
 const useAxiosSecure = () => {
