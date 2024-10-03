@@ -53,7 +53,7 @@ export const router = createBrowserRouter([
             path: '/products/:id',
             element: 
              
-                <ProductDetail />
+            <PrivateRoute>  <ProductDetail /></PrivateRoute>
               
            
           },
@@ -64,19 +64,20 @@ export const router = createBrowserRouter([
           },
           {
             path: 'cart', 
-            element:<Cart></Cart>
+            element:<PrivateRoute><Cart></Cart></PrivateRoute>
           },
           {
             path: 'payments',
-            element: <Payments></Payments>
+            element:<PrivateRoute><Payments></Payments></PrivateRoute> 
           },
           {
             path: 'paymentHistory',
-            element: <PaymentHistory></PaymentHistory>
+            element:<PrivateRoute> <PaymentHistory></PaymentHistory></PrivateRoute>
           },
           {
-            path: 'favourites', 
-            element:<Favourite></Favourite>
+            path: 'favourites',
+
+            element:<PrivateRoute><Favourite></Favourite></PrivateRoute>
           },
           {
             path: 'manageitem', 
