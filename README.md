@@ -20,7 +20,6 @@ Related Products: Users can see similar items based on the product they view.
 Manage users and perform CRUD operations for products (add, update, delete).
 Order List: Admins can view all customer orders and their details.
 
-website link: https://lnkd.in/exECWE7F
 
 ⚙️ Tech Stack:
 Frontend: React.js
