@@ -19,7 +19,6 @@ const PopularProduct = () => {
     return <Loader />;
   }
 
-  // Limit the products to the first 4
   const limitedProducts = menu.slice(0, 8);
   /* const [menu,setMenu] = useState([6]);
    
