@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+//
 
 const SmallCart = ({product}) => {
     const {  image, price,   _id,name } = product || {};
