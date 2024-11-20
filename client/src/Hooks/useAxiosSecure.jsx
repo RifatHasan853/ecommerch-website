@@ -10,7 +10,6 @@ const useAxiosSecure = () => {
     const navigate = useNavigate();
     const { logOut } = useAuth();
 
-    // Request interceptor to add any necessary headers (if needed)
     axiosSecure.interceptors.request.use(
         async (config) => {
             // No need to add JWT tokens; the browser will handle cookies automatically
