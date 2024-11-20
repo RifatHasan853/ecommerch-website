@@ -1,4 +1,4 @@
-
+//
 
 const Slide = ({ image, text }) => {
   return (
