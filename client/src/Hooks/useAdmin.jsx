@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import useAuth from "./useAuth";
 
-// Define the base URL for your API
+
 const BASE_URL = 'https://ecommerch-server-vintnoryc-rifat-hasans-projects.vercel.app';
 
 const useAdmin = () => {
