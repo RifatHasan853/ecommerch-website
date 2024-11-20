@@ -13,7 +13,7 @@ export const Auth = () => {
           isActive ? "" : ""
         }`}
       >
-        {/* Sign In Form */}
+
         <div
           className={`absolute top-0 h-full w-full md:w-1/2 transition-all duration-700 ease-in-out transform ${
             isActive ? "translate-x-full opacity-0" : "translate-x-0 opacity-100"
@@ -22,7 +22,6 @@ export const Auth = () => {
           <Login />
         </div>
 
-        {/* Sign Up Form */}
         <div
           className={`absolute top-0 h-full w-full md:w-1/2 transition-all duration-700 ease-in-out transform ${
             isActive ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
@@ -31,7 +30,7 @@ export const Auth = () => {
           <Register />
         </div>
 
-        {/* Overlay Section */}
+
         <div
           className={`absolute top-0 left-0 w-full h-full bg-red-500 text-white transition-all duration-700 ease-in-out transform ${
             isActive ? "translate-x-0" : "translate-x-1/2"
