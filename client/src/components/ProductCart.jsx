@@ -27,7 +27,7 @@ const ProductCart = ({ products }) => {
   const handleAddToCart = () => {
     if (user && user.email) {
       if (isFavorited) {
-        // Show alert if the product is already in the favorites
+
         Swal.fire({
           position: 'top-end',
           icon: 'warning',
@@ -36,7 +36,6 @@ const ProductCart = ({ products }) => {
           timer: 1500
         });
       } else {
-        // Add to favorites if it's not already in
         const cartItem = {
           menuId: _id,
           email: user.email,
